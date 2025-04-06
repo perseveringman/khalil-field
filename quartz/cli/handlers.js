@@ -414,6 +414,7 @@ export async function handleBuild(argv) {
         if (path.extname(base) === "") {
           base += ".html"
         }
+        console.log(argv.output)
         if (fs.existsSync(path.posix.join(argv.output, base))) {
           return redirect(fp.slice(0, -1))
         }
